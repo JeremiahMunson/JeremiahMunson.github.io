@@ -1,0 +1,54 @@
+.contact-icon{
+    padding: 5px;
+}
+
+.section{
+    margin-bottom: 2%;
+}
+
+#email{
+    margin-bottom: -30px;
+}
+
+#github{
+    margin-top: -30px;
+    margin-bottom: -30px;
+}
+
+#linkedin{
+    margin-top: -30px;
+    margin-bottom: -30px;
+}
+
+#linkedin-small{
+    display: none;
+}
+
+#intro{
+    margin-bottom: 20px;
+}
+
+.hackathon-small{
+    display: none;
+}
+
+.row img{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.container{
+    margin-bottom:2%;
+}
+
+@media screen and (max-width: 991px) {
+    #github {margin-top: 0px;}
+}
+
+@media screen and (max-width: 390px) {
+    #linkedin-big {display: none;}
+    #linkedin-small{display: block;}
+    .hackathon-big{display: none;}
+    .hackathon-small{display: block;}
+}
