@@ -52,3 +52,23 @@
     .hackathon-big{display: none;}
     .hackathon-small{display: block;}
 }
+
+#small-screen-resumes{
+    display: none;
+}
+
+#big-screen-resumes{
+    display: block;
+}
+
+@media screen and (max-width: 800px) {
+    .container{
+        margin-right: 2%;
+        margin-left: 2%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    #small-screen-resumes{display: block;}
+    #big-screen-resumes{display: none;}
+}
