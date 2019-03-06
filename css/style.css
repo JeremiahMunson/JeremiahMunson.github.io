@@ -1,3 +1,99 @@
+/* Start Navbar Styles*/
+.navbar-mine {
+    overflow: hidden;
+    background-color: rgb(70,70,70);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar-mine .start {
+    float: left;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+
+    padding-top: 15px;
+    padding-bottom: 16px;
+
+    padding-left: 14px;
+    padding-right: 6px;
+
+    text-decoration: none;
+}
+
+.navbar-mine .inactive, .active {
+    float: left;
+    font-size: 16px;
+    color: rgb(180,180,180);
+    text-align: center;
+
+    padding-top: 17px;
+    padding-bottom: 16px;
+    padding-left: 14px;
+    
+    text-decoration: none;
+}
+
+.navbar-mine .inactive:hover {
+    color: rgb(235, 235, 235);
+}
+
+.navbar-mine .active, .active:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: none; 
+}
+
+.small{
+    display: none;
+}
+
+.dropdown-mine {
+    float: right;
+    padding-right: 14px;
+    padding-top: 16px;
+    overflow: hidden;
+}
+
+.dropdown-mine .dropbtn {
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    color: white;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-mine-content {
+    left: auto;
+    right: 14px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-mine-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 16px;
+}
+
+.dropdown-mine-content a:hover {
+    background-color: #ddd;
+}
+
+.show{
+    display: block;
+}
+/*End Navbar Styles*/
+
+
 .contact-icon{
     padding: 5px;
 }
@@ -66,6 +162,8 @@
         margin-right: 2%;
         margin-left: 2%;
     }
+    .small{display: block;}
+    .big{display: none;}
 }
 
 @media screen and (max-width: 520px) {
