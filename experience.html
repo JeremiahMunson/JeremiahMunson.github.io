@@ -54,7 +54,25 @@
                 <h2>Math and Physics Consultant: PRG Scenic, Automation Department</h2>
                 <h3>June 2019 - August 2019</h3>
             </div>
+            <img src="prg.jpg" width=100px alt="PRG Logo">
         </div>
+        <p>
+            Production Resource Group (PRG) is an international live entertainment and event technology solution provider. I worked with Research and Development in the Automation Department at the facility in New Windsor, NY that provides automated systems for theatrical productions, concerts, and many other live events.
+            The project I spent most of my time working on was swing cancellation. Whenever a piece is hanging by cables or chains and it needs to move the piece will begin to swing. When two hanging pieces approach each other they cannot have any swing, otherwise they will collide. Normally this can be provided by breaking up the acceleration and deceleration phases into impulses.
+            The impulses would produce more swing that ends up canceling the previous swing. However, things get more complicated when the cable length is changing so the system resembles a pendulum with changing line length. My goal was to find a way to move the pieces in the required time frame and reach their destination without any residual sway.
+            My final result was a simulation written in C++ with a C# interface that simulates many different acceleration, deceleration, and constant velocity times within the required move duration. The simulation would use the final angle of the piece and the angular velocity to determine the amount of sway when the move ends.
+            By simulating different moves the program determines what acceleration, deceleration and constant velocity times provide the least amount of sway.
+        </p>
+        <p>
+            The other project I briefly worked on was taking a hanging piece and tilting it. Given the short time to work on this after finishing work on swing cancellation I was only able to work on a piece in 1 dimension like a bar or wall where all of the connections are in a straight line.
+            For the piece to be stationary after tilting there needs to be no net force on the piece. This is easy vertically because the tension in the cables counters the force from gravity. The tricky part is the horizontal component of the tension. When a piece is at an angle the piece itself will be shifted over slightly and the cables will not hang straight up and down.
+            This means that for a piece to be stationary (in equilibrium) the sum of the horizontal components from the tension of each line must be zero. I wrote a program in C# that takes information on the connections and the desired piece height and tilt angle and determines what the length of each cable must be for the desired height and angle to be at equilibrium.
+        </p>
+        <p>
+            In these simulations I wrote several algorithms used in computational physics. For the swing cancellation project I created and used the Fourth Order Runge-Kutta ordinary differential equation solver (RK4) to simulate the piece during a move. To simulate the changing angular velocity I had to calculate the angular acceleration which I did using classical mechanics with multiple non-inertial reference frames including one rotating reference frame.
+            For the coordinated motion project I wrote a multidimensional root-finding algorithm using the Newton-Raphson technique. For this I created a matrix class that was used to store the Jacobian and the inverse of the Jacobian. 
+            To calculate the inverse of the Jacobian the program adjoins the Jacobian and the identity matrix and row reduces until the matrix is in row reduced echelon form. The part of the matrix that used to be the Jacobian is now the identity matrix and part that was the identity matrix is now the inverse of the Jacobian.
+        </p>
     </div>
 
     <div class="section" id="systems-engineer">
@@ -65,8 +83,15 @@
             </div>
             <img src="CaNOP.png" width=100px height=90px alt="CaNOP Logo">
         </div>
-        <p>I became the Systems Engineer for the Canopy Near-Infrared Observing Project (<a href="./projects.html#canop">CaNOP</a>) CubeSat the summer after my freshman year of college. As the SE I am the student lead for the project. For the first two years that I was the SE, the team averaged about 20 students split into 6-7 different systems. I led full team meetings on a weekly basis in order to update everyone on the overall progress of the current documentation and next steps. Each system also had their own weekly meetings to go over their own system specific updates. I led the completion of the Systems Requirement Review (SRR), Conceptual Design Review (CoDR), Preliminary Design Review (PDR), and Critical Design Review (CDR) which were given and usually presented to NASA and the Safety Design Review Phase 0/1 and Safety Design Review Phase 2 for our launch integrator, NanoRacks. I have performed mission simulations using Systems Tool Kit (STK) including communications coverage, power availability, and coverage over imaging targets. I learned the basics of NASA’s Debris Assessment Software (DAS) to create preliminary orbital lifetime and debris risk estimates.</p>
-        <p>I attended multiple conferences and workshops to learn about other CubeSat missions and presented on our own CubeSat mission. The following is a list of presentations I have given on the CaNOP CubeSat project:</p>
+        <p>
+            I became the Systems Engineer for the Canopy Near-Infrared Observing Project (<a href="./projects.html#canop">CaNOP</a>) CubeSat the summer after my freshman year of college. As the SE I was the student lead for the project. For the first two years that I was the SE, the team averaged about 20 students split into 6-7 different systems. 
+            I led full team meetings on a weekly basis in order to update everyone on the overall progress of the current documentation and next steps. Each system also had their own weekly meetings to go over their own system specific updates. 
+            I led the completion of the Systems Requirement Review (SRR), Conceptual Design Review (CoDR), Preliminary Design Review (PDR), and Critical Design Review (CDR) which were given and usually presented to NASA and the Safety Design Review Phase 0/1 and Safety Design Review Phase 2 for our launch integrator, NanoRacks. 
+            I performed mission simulations using Systems Tool Kit (STK) including communications coverage, power availability, and coverage over imaging targets. I learned the basics of NASA’s Debris Assessment Software (DAS) to create preliminary orbital lifetime and debris risk estimates.
+        </p>
+        <p>
+            I attended multiple conferences and workshops to learn about other CubeSat missions and presented on our own CubeSat mission. The following is a list of presentations I have given on the CaNOP CubeSat project:
+        </p>
         <ul>
             <li>CubeSat Developers Workshop - San Luis Obispo, CA: Poster Presentation (April-May 2018)</li>
             <li>Carthage College Celebration of Scholars - Kenosha, WI: Poster Presentation (April 2018)</li>
@@ -111,7 +136,7 @@
     </div>
 
     <hr/>
-    <div class="footer">This page is created and maintained by Jeremiah Munson using HTML5, CSS, and Bootstrap. Last updated March 27, 2019.</div>
+    <div class="footer">This page is created and maintained by Jeremiah Munson using HTML5, CSS, JavaScript, and Bootstrap. Last updated August 22, 2019.</div>
 </div>
 
 </body>
